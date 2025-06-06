@@ -14,7 +14,7 @@ class Gossip
     end
 
     def save_as_csv
-        CSV.open("gossip.csv", "a") do |csv|
+        CSV.open("db/gossip.csv", "a") do |csv|
             csv << [author, content]
         end
         puts "Gossip enregistré : #{author} - #{content}"
