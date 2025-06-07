@@ -24,6 +24,6 @@ Build an app using **OOP**, then level it up with **MVC** to:
 
 ------------------------
 
-Author: Martine PINNA  
-GitHub: Martine9670
-Discord: Martine PINNA
+- Author: Martine PINNA  
+- GitHub: Martine9670
+- Discord: Martine PINNA
