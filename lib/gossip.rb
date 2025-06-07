@@ -21,4 +21,8 @@ class Gossip
         end
         puts "Gossip enregistré : #{author} - #{content}"
     end
+    
+    def self.read_csv
+        CSV.read("db/gossip.csv")
+    end
 end

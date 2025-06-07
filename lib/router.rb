@@ -9,12 +9,15 @@ class Router
 
     def perform
         while true
-            puts "Choisis 1 ou 4"
+            puts "Choisis 1, 2, ou 4"
             choice = gets.chomp.to_i
             case choice 
             when 1
                 puts "\nCrées ton gossip !!"
                 @controller.create_gossip
+            when 2
+                puts "Afficher tous les potins."
+                puts @controller.index_gossips
             when 4
                 puts "À bientôt !"
                 break 

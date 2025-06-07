@@ -14,5 +14,9 @@ class Controller
 
         gossip.save_as_csv
     end
+
+    def index_gossips
+        Gossip.read_csv
+    end
 end
 

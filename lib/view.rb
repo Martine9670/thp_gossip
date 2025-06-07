@@ -11,5 +11,10 @@ class View
     say = gets.chomp
         return params = {author: name, content: say}
     end
+
+    def index_gossips
+        puts "\n Affichage de tous les potins !"
+        index_gossips = Index_gossips.new
+    end
 end
 
