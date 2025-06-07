@@ -9,23 +9,31 @@ class Router
 
     def perform
         while true
-            puts "Choisis 1, 2, ou 4"
+            puts "\nChoisis 1, 2, 3, ou 4"
             choice = gets.chomp.to_i
             case choice 
             when 1
-                puts "\nCrées ton gossip !!"
+                puts "Crées ton gossip !!"
                 @controller.create_gossip
             when 2
                 puts "Afficher tous les potins."
-                puts @controller.index_gossips
+                all_gossips = @controller.index_gossips
+
+                index = 0
+                while index < all_gossips.length
+                    puts index
+                    all_gossips[index].afficher
+                    index += 1
+                end
+            when 3
+                puts "Quel gossip veux-tu supprimer ?"
+
             when 4
                 puts "À bientôt !"
                 break 
             else 
-                puts "On t'a dit 1 ou 4"
+                puts "Saisie invalide."
             end
         end
     end
 end
-
-

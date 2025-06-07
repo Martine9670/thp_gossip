@@ -17,4 +17,3 @@ class View
         index_gossips = Index_gossips.new
     end
 end
-

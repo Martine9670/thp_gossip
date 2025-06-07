@@ -12,7 +12,7 @@ class Gossip
     end
 
     def afficher
-        puts "#{@author} raconte : #{@content}"
+        puts "#{@author} : #{@content}"
     end
 
     def save_as_csv
@@ -23,6 +23,16 @@ class Gossip
     end
     
     def self.read_csv
-        CSV.read("db/gossip.csv")
+        all_gossips = []
+        CSV.foreach("db/gossip.csv") do |ligne|
+            g = Gossip.new(ligne[0], ligne[1])
+            all_gossips.push(g)
+        end
+        return all_gossips
+    end
+
+    def retire(gossip)
+        @author.delete(gossip)
+        @content.delete(gossip)
     end
 end
