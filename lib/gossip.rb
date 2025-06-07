@@ -1,5 +1,7 @@
-require 'pry'
 require 'csv'
+require_relative 'controller'
+require_relative 'router'
+require_relative 'view'
 
 class Gossip
     attr_reader :author, :content
@@ -20,5 +22,3 @@ class Gossip
         puts "Gossip enregistré : #{author} - #{content}"
     end
 end
-
-binding.pry

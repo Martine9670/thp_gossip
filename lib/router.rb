@@ -1,4 +1,6 @@
 require_relative 'controller'
+require_relative 'gossip'
+require_relative 'view'
 
 class Router
     def initialize
@@ -11,7 +13,7 @@ class Router
             choice = gets.chomp.to_i
             case choice 
             when 1
-                puts "Crées ton gossip"
+                puts "\nCrées ton gossip !!"
                 @controller.create_gossip
             when 4
                 puts "À bientôt !"
